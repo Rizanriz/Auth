@@ -1,4 +1,4 @@
-import { User } from '../models/user.model.js'
+import { User } from '../models/user.model.js'  
 import bcrypt from "bcryptjs"
 import crypto from "crypto"
 import { generateTokenAndSetCookie } from '../utils/generateTokenAndSetCookie.js'
@@ -87,7 +87,7 @@ export const login = async (req, res) => {
         }
         const isPasswordValid = await bcrypt.compare(password, user.password)
         if (!isPasswordValid) {
-            return res.status(400).json({ success: false, message: "Invalid credential" })
+            return res.status(400).json({ success: false, message: "Invalid password" })
         }
 
         generateTokenAndSetCookie(res, user._id)
