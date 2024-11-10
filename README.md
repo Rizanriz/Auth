@@ -45,7 +45,7 @@ Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/your-username/your-repo-name.git
+git clone (https://github.com/Rizanriz/Auth.git)
 cd your-repo-name
 Install dependencies for both frontend and backend:
 
